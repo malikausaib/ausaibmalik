@@ -80,20 +80,22 @@ button.send:hover:not(:disabled){background:transparent;color:var(--ink)}button.
 .mails a{display:block;padding:5px 0;word-break:break-all}
 footer{padding-top:70px;padding-bottom:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 /* kid */
-#kid{position:fixed;left:0;top:0;width:38px;z-index:3;pointer-events:none;transform:translateY(var(--y,80px))}
-@media(min-width:900px){#kid{left:34px;width:62px}}
+#kid{position:fixed;left:var(--kl);top:0;width:var(--kw);z-index:7;pointer-events:none;transform:translateY(var(--y,80px))}
+:root{--kl:0px;--kw:38px}@media(min-width:900px){:root{--kl:34px;--kw:62px}}
+#rope{position:fixed;top:0;bottom:0;left:calc(var(--kl) + var(--kw)/2 - 2px);width:4px;z-index:6;pointer-events:none;border-radius:2px;background:repeating-linear-gradient(155deg,#111 0 3px,#8d897f 3px 5px)}
+#rope:before{content:"";position:absolute;left:-5px;top:0;width:14px;height:14px;border:3px solid #111;border-radius:50%;background:var(--bg)}
 #kid *{transform-box:view-box}#kid .arm,#kid .leg{transition:transform .28s ease-out}
 #kid .aL{transform-origin:18px 35px}#kid .aR{transform-origin:30px 35px}#kid .lL{transform-origin:21px 52px}#kid .lR{transform-origin:27px 52px}
-#kid .body{transform-origin:24px 13px}#kid .hook,#kid .wind,#kid .drop,#kid .mO,#kid .mS{opacity:0;transition:opacity .2s}
+#kid .body{transform-origin:24px 9px}#kid .wind,#kid .drop,#kid .mO,#kid .mS{opacity:0;transition:opacity .2s}
 #kid .eyes{transform-origin:24px 22px;animation:blink 4s infinite}@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
-#kid.fall .mO,#kid.release .mO{opacity:1}#kid.hang .mS{opacity:1}#kid.hang .hook,#kid.hang .drop{opacity:1}#kid.fall .wind{opacity:1;animation:wd .35s linear infinite}
+#kid.fall .mO,#kid.release .mO{opacity:1}#kid.hang .mS{opacity:1}#kid.hang .drop{opacity:1}#kid.fall .wind{opacity:1;animation:wd .35s linear infinite}
 #kid .drop{animation:dr 2s infinite}@keyframes dr{0%{transform:translateY(0)}100%{transform:translateY(6px)}}
 @keyframes wd{from{transform:translateY(8px)}to{transform:translateY(-8px)}}
 #kid.fall .aL{animation:fL .3s ease-in-out infinite alternate}#kid.fall .aR{animation:fR .3s ease-in-out infinite alternate .1s}
 #kid.fall .lL{animation:lg .4s ease-in-out infinite alternate}#kid.fall .lR{animation:lg .4s ease-in-out infinite alternate-reverse}
 #kid.fall .body{animation:tilt .9s ease-in-out infinite alternate}
-#kid.release .aL{transform:rotate(80deg)}#kid.release .aR{transform:rotate(-80deg)}
-#kid.hang .aL{transform:rotate(155deg)}#kid.hang .aR{transform:rotate(-155deg)}
+#kid.release .aL{transform:rotate(130deg)}#kid.release .aR{transform:rotate(-130deg)}
+#kid.hang .aL{transform:rotate(189deg)}#kid.hang .aR{transform:rotate(-189deg)}
 #kid.hang .body{animation:swing 2.6s ease-in-out infinite alternate}
 #kid.hang .lL{animation:dl 1.3s ease-in-out infinite alternate}#kid.hang .lR{animation:dl 1.3s ease-in-out infinite alternate-reverse}
 @keyframes fL{from{transform:rotate(105deg)}to{transform:rotate(150deg)}}@keyframes fR{from{transform:rotate(-105deg)}to{transform:rotate(-150deg)}}
@@ -102,16 +104,16 @@ footer{padding-top:70px;padding-bottom:30px;display:flex;justify-content:space-b
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
 </style></head>
 <body>
+<div id="rope" aria-hidden="true"></div>
 <svg id="kid" class="hang" viewBox="0 0 48 76" aria-hidden="true" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
  <g class="wind" stroke-width="1.4"><line x1="4" y1="20" x2="4" y2="30"/><line x1="44" y1="26" x2="44" y2="38"/><line x1="9" y1="40" x2="9" y2="48"/></g>
- <g class="hook"><line x1="2" y1="12.5" x2="46" y2="12.5" stroke-width="3.4"/><line x1="8" y1="9" x2="8" y2="12" /><line x1="40" y1="9" x2="40" y2="12"/></g>
  <g class="body">
   <rect x="29" y="31" width="9" height="15" rx="3" fill="#fff"/>
   <g class="leg lL"><line x1="21" y1="52" x2="21" y2="66" stroke-width="5" /><path d="M16.5 66.5h8.5a2 2 0 0 1 2 2v1h-10.5z" fill="#fff" stroke-width="1.6"/></g>
   <g class="leg lR"><line x1="27" y1="52" x2="27" y2="66" stroke-width="5"/><path d="M22.5 66.5h8.5a2 2 0 0 1 2 2v1h-10.5z" fill="#fff" stroke-width="1.6"/></g>
   <rect x="16" y="30" width="16" height="23" rx="6" fill="#111"/><path d="M21 38v6M27 38v6" stroke="#fff" stroke-width="1.3"/><path d="M19 48h10" stroke="#fff" stroke-width="1.2"/>
-  <g class="arm aL"><line x1="18" y1="35" x2="18" y2="53" stroke-width="4.4"/><circle cx="18" cy="54" r="3" fill="#fff" stroke-width="1.6"/></g>
-  <g class="arm aR"><line x1="30" y1="35" x2="30" y2="53" stroke-width="4.4"/><circle cx="30" cy="54" r="3" fill="#fff" stroke-width="1.6"/></g>
+  <g class="arm aL"><line x1="18" y1="35" x2="18" y2="60" stroke-width="4.4"/><circle cx="18" cy="61" r="3" fill="#fff" stroke-width="1.6"/></g>
+  <g class="arm aR"><line x1="30" y1="35" x2="30" y2="60" stroke-width="4.4"/><circle cx="30" cy="61" r="3" fill="#fff" stroke-width="1.6"/></g>
   <circle cx="24" cy="22" r="9.5" fill="#fff"/><path d="M14.8 20c1-7 6-9.5 10-9.2 4.2.2 8.3 3 8.6 9.2-3-1.5-5.5-3.6-6.4-5.4-2.2 3-7.5 5.2-12.2 5.4z" fill="#111" stroke-width="1.4"/>
   <g class="eyes" fill="#111" stroke="none"><circle cx="20.5" cy="23" r="1.4"/><circle cx="27.5" cy="23" r="1.4"/></g>
   <ellipse class="mO" cx="24" cy="27.5" rx="1.9" ry="2.4" fill="#111" stroke="none"/><path class="mS" d="M20.5 26.5q3.5 3.4 7 0" stroke-width="1.5"/>
