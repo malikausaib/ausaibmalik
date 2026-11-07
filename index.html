@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Malik Mohmmad Ausaib — SRMIST Kattankulathur</title>
+<meta name="description" content="Portfolio of Malik Mohmmad Ausaib, 3rd semester student at SRM Institute of Science and Technology, Kattankulathur.">
+<meta property="og:title" content="Malik Mohmmad Ausaib"><meta property="og:description" content="Student at SRMIST Kattankulathur. Third semester.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#efece4;--ink:#111;--mute:#6f6b62;--acc:#ff4b1f;--dark:#131313;--gut:44px;--pad:clamp(20px,5vw,72px);
+--serif:"Instrument Serif",Georgia,serif;--sans:"Inter Tight",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit}::selection{background:var(--acc);color:#fff}
+.mono{font:400 .72rem/1.4 var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+main,footer{padding-left:calc(var(--gut) + var(--pad)*.4);padding-right:var(--pad)}
+@media(min-width:900px){:root{--gut:130px}}
+nav{position:fixed;top:0;right:0;left:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:6px var(--pad) 6px calc(var(--gut) + var(--pad)*.4);background:linear-gradient(var(--bg) 60%,#efece400)}
+nav div{display:flex;gap:clamp(10px,2.5vw,28px)}nav a{text-decoration:none;min-height:44px;display:flex;align-items:center}nav a:hover{color:var(--acc)}
+#clock{color:var(--ink)}#clock:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:8px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.2}}
+section{padding:clamp(72px,12vw,150px) 0 0}
+h2{font:400 clamp(2.2rem,6vw,4.6rem)/.95 var(--serif);margin:.4rem 0 2.2rem;letter-spacing:-.02em}h2 em{color:var(--acc)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.rv.on{opacity:1;transform:none}
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:100px 0 28px;position:relative}
+h1{font:400 clamp(2.7rem,14.5vw,11.5rem)/.86 var(--serif);letter-spacing:-.035em;text-transform:uppercase}
+h1 span{display:block;white-space:nowrap}h1 span:nth-child(2){padding-left:.7em;font-style:italic;color:var(--acc)}
+h1 span:nth-child(3){padding-left:.2em;color:transparent;-webkit-text-stroke:max(1.5px,.012em) var(--ink)}
+.badge{position:absolute;top:96px;right:0;width:clamp(84px,14vw,150px);aspect-ratio:1}
+.badge svg{width:100%;height:100%;animation:spin 22s linear infinite}.badge b{position:absolute;inset:0;display:grid;place-items:center;font:400 1.6rem var(--serif);color:var(--acc)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-row{display:grid;gap:26px;margin-top:clamp(26px,4vw,50px);border-top:2px solid var(--ink);padding-top:20px}
+@media(min-width:800px){.hero-row{grid-template-columns:1fr 1.1fr;align-items:end}}
+.hero p{max-width:36ch;font-size:1.15rem}
+.soc{display:flex;gap:10px;flex-wrap:wrap}
+.soc a{flex:1 1 170px;display:flex;align-items:center;gap:12px;min-height:56px;padding:0 18px;border:1.5px solid var(--ink);text-decoration:none;font-weight:500;background:linear-gradient(var(--acc),var(--acc)) 0 100%/100% 0 no-repeat;transition:background-size .3s,color .3s,border-color .3s}
+.soc a:hover,.soc a:focus-visible{background-size:100% 100%;border-color:var(--acc);color:#fff}.soc svg{width:20px;height:20px;fill:currentColor}.soc .arr{margin-left:auto;transition:transform .2s}.soc a:hover .arr{transform:translate(3px,-3px)}
+.scroll{margin-top:22px;display:flex;align-items:center;gap:12px}.scroll i{width:1px;height:34px;background:var(--ink);transform-origin:top;animation:ln 2s ease-in-out infinite}
+@keyframes ln{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+/* marquee */
+.mq{margin:0 calc(var(--pad)*-1) 0 0;overflow:hidden;background:var(--acc);color:#111;padding:14px 0;transform:rotate(-1.2deg);margin-top:60px}
+.mq div{display:flex;width:max-content;animation:mq 50s linear infinite;font:400 clamp(1.4rem,3vw,2.3rem)/1 var(--serif);font-style:italic;white-space:nowrap}.mq span{padding:0 1.1rem}.mq span:after{content:"✦";margin-left:2.2rem;font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* about */
+.about{display:grid;gap:24px}@media(min-width:800px){.about{grid-template-columns:1fr 2.2fr}}
+.about p{font:400 clamp(1.4rem,3vw,2.3rem)/1.25 var(--serif);max-width:26em}.about p+p{font:400 1.0625rem/1.6 var(--sans);margin-top:1.2rem;color:var(--mute);max-width:44ch}
+.about mark{background:none;color:var(--acc);font-style:italic}
+/* journey */
+.jr{background:var(--dark);color:var(--bg);padding:clamp(28px,5vw,64px);margin-right:calc(var(--pad)*-1);display:grid;gap:28px}
+.jr .mono{color:#9b978d}.jr h2{margin-bottom:.8rem}
+@media(min-width:900px){.jr{grid-template-columns:.8fr 1.6fr}}
+.tabs{display:flex;gap:8px}@media(min-width:900px){.tabs{flex-direction:column;gap:0}}
+.tabs button{all:unset;cursor:pointer;display:flex;align-items:baseline;gap:12px;padding:6px 14px 6px 0;min-height:48px;color:#6c6960;font:400 clamp(3rem,9vw,7rem)/1 var(--serif);transition:color .25s,transform .25s;box-sizing:border-box}
+.tabs button:hover,.tabs button[aria-selected=true]{color:var(--bg)}.tabs button[aria-selected=true]{transform:translateX(10px)}
+.tabs button[aria-selected=true] .mono{color:var(--acc)}.tabs .mono{display:none}@media(min-width:900px){.tabs .mono{display:inline}}
+.tabs .now{display:inline;color:var(--acc)}.tabs button:focus-visible{outline:2px solid var(--acc)}
+#pn ol{list-style:none;padding:0}#pn li{display:grid;grid-template-columns:2.6rem 1fr auto;gap:10px;align-items:baseline;padding:14px 0;border-top:1px solid #ffffff2a;font:400 clamp(1.2rem,2.4vw,1.8rem)/1.2 var(--serif);animation:in .45s both;transition:padding .25s,color .25s}
+#pn li:hover{padding-left:12px;color:var(--acc)}#pn li:last-child{border-bottom:1px solid #ffffff2a}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+/* languages */
+.langs{list-style:none;padding:0}.langs li{display:grid;grid-template-columns:3rem 1fr;gap:8px 12px;align-items:baseline;padding:10px 0;border-top:2px solid var(--ink);position:relative;transition:padding .3s,color .3s}
+.langs li:last-child{border-bottom:2px solid var(--ink)}
+.langs li:before{content:"";position:absolute;inset:0;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.7,0,.2,1);z-index:-1}
+.langs li:hover:before{transform:scaleX(1)}.langs li:hover{padding-left:16px}.langs{isolation:isolate}
+.langs strong{font:400 clamp(3.2rem,13vw,9.5rem)/1 var(--serif);letter-spacing:-.03em}
+.langs code{grid-column:2;font:400 .85rem var(--mono);color:var(--mute)}.langs li:hover code{color:var(--ink)}
+@media(min-width:800px){.langs li{grid-template-columns:3rem 1fr auto}.langs code{grid-column:3;opacity:0;transform:translateX(-10px);transition:.3s}.langs li:hover code{opacity:1;transform:none}}
+/* contact */
+.contact{background:var(--acc);padding:clamp(28px,5vw,64px);margin-right:calc(var(--pad)*-1);display:grid;gap:40px}@media(min-width:900px){.contact{grid-template-columns:1fr 1.4fr}}
+.contact .mono{color:#111b}.contact h2 em{color:#fff}
+form{display:grid;gap:22px}label{display:grid;gap:6px}
+input,textarea{font:inherit;color:inherit;background:transparent;border:0;border-bottom:1.5px solid var(--ink);padding:10px 0;border-radius:0;width:100%}
+input:focus,textarea:focus{outline:0;border-bottom-width:4px}textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+button.send{justify-self:start;min-height:54px;padding:0 34px;background:var(--ink);color:var(--bg);border:2px solid var(--ink);font:500 1rem var(--sans);cursor:pointer;transition:.2s}
+button.send:hover:not(:disabled){background:transparent;color:var(--ink)}button.send:disabled{opacity:.5;cursor:wait}
+#msg{min-height:1.6em;font:400 1.5rem var(--serif)}#msg.err{font:500 .95rem var(--sans);border-left:3px solid var(--ink);padding-left:10px}
+.mails a{display:block;padding:5px 0;word-break:break-all}
+footer{padding-top:70px;padding-bottom:30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+/* kid */
+#kid{position:fixed;left:0;top:0;width:38px;z-index:3;pointer-events:none;transform:translateY(var(--y,80px))}
+@media(min-width:900px){#kid{left:34px;width:62px}}
+#kid *{transform-box:view-box}#kid .arm,#kid .leg{transition:transform .28s ease-out}
+#kid .aL{transform-origin:18px 35px}#kid .aR{transform-origin:30px 35px}#kid .lL{transform-origin:21px 52px}#kid .lR{transform-origin:27px 52px}
+#kid .body{transform-origin:24px 13px}#kid .hook,#kid .wind,#kid .drop,#kid .mO,#kid .mS{opacity:0;transition:opacity .2s}
+#kid .eyes{transform-origin:24px 22px;animation:blink 4s infinite}@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+#kid.fall .mO,#kid.release .mO{opacity:1}#kid.hang .mS{opacity:1}#kid.hang .hook,#kid.hang .drop{opacity:1}#kid.fall .wind{opacity:1;animation:wd .35s linear infinite}
+#kid .drop{animation:dr 2s infinite}@keyframes dr{0%{transform:translateY(0)}100%{transform:translateY(6px)}}
+@keyframes wd{from{transform:translateY(8px)}to{transform:translateY(-8px)}}
+#kid.fall .aL{animation:fL .3s ease-in-out infinite alternate}#kid.fall .aR{animation:fR .3s ease-in-out infinite alternate .1s}
+#kid.fall .lL{animation:lg .4s ease-in-out infinite alternate}#kid.fall .lR{animation:lg .4s ease-in-out infinite alternate-reverse}
+#kid.fall .body{animation:tilt .9s ease-in-out infinite alternate}
+#kid.release .aL{transform:rotate(80deg)}#kid.release .aR{transform:rotate(-80deg)}
+#kid.hang .aL{transform:rotate(155deg)}#kid.hang .aR{transform:rotate(-155deg)}
+#kid.hang .body{animation:swing 2.6s ease-in-out infinite alternate}
+#kid.hang .lL{animation:dl 1.3s ease-in-out infinite alternate}#kid.hang .lR{animation:dl 1.3s ease-in-out infinite alternate-reverse}
+@keyframes fL{from{transform:rotate(105deg)}to{transform:rotate(150deg)}}@keyframes fR{from{transform:rotate(-105deg)}to{transform:rotate(-150deg)}}
+@keyframes lg{from{transform:rotate(-28deg)}to{transform:rotate(28deg)}}@keyframes tilt{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+@keyframes swing{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}@keyframes dl{from{transform:rotate(-7deg)}to{transform:rotate(9deg)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style></head>
+<body>
+<svg id="kid" class="hang" viewBox="0 0 48 76" aria-hidden="true" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ <g class="wind" stroke-width="1.4"><line x1="4" y1="20" x2="4" y2="30"/><line x1="44" y1="26" x2="44" y2="38"/><line x1="9" y1="40" x2="9" y2="48"/></g>
+ <g class="hook"><line x1="2" y1="12.5" x2="46" y2="12.5" stroke-width="3.4"/><line x1="8" y1="9" x2="8" y2="12" /><line x1="40" y1="9" x2="40" y2="12"/></g>
+ <g class="body">
+  <rect x="29" y="31" width="9" height="15" rx="3" fill="#fff"/>
+  <g class="leg lL"><line x1="21" y1="52" x2="21" y2="66" stroke-width="5" /><path d="M16.5 66.5h8.5a2 2 0 0 1 2 2v1h-10.5z" fill="#fff" stroke-width="1.6"/></g>
+  <g class="leg lR"><line x1="27" y1="52" x2="27" y2="66" stroke-width="5"/><path d="M22.5 66.5h8.5a2 2 0 0 1 2 2v1h-10.5z" fill="#fff" stroke-width="1.6"/></g>
+  <rect x="16" y="30" width="16" height="23" rx="6" fill="#111"/><path d="M21 38v6M27 38v6" stroke="#fff" stroke-width="1.3"/><path d="M19 48h10" stroke="#fff" stroke-width="1.2"/>
+  <g class="arm aL"><line x1="18" y1="35" x2="18" y2="53" stroke-width="4.4"/><circle cx="18" cy="54" r="3" fill="#fff" stroke-width="1.6"/></g>
+  <g class="arm aR"><line x1="30" y1="35" x2="30" y2="53" stroke-width="4.4"/><circle cx="30" cy="54" r="3" fill="#fff" stroke-width="1.6"/></g>
+  <circle cx="24" cy="22" r="9.5" fill="#fff"/><path d="M14.8 20c1-7 6-9.5 10-9.2 4.2.2 8.3 3 8.6 9.2-3-1.5-5.5-3.6-6.4-5.4-2.2 3-7.5 5.2-12.2 5.4z" fill="#111" stroke-width="1.4"/>
+  <g class="eyes" fill="#111" stroke="none"><circle cx="20.5" cy="23" r="1.4"/><circle cx="27.5" cy="23" r="1.4"/></g>
+  <ellipse class="mO" cx="24" cy="27.5" rx="1.9" ry="2.4" fill="#111" stroke="none"/><path class="mS" d="M20.5 26.5q3.5 3.4 7 0" stroke-width="1.5"/>
+  <path class="drop" d="M35 17q2 3 0 4.6-2-1.6 0-4.6z" fill="#fff" stroke-width="1.2"/>
+ </g>
+</svg>
+<nav class="mono" aria-label="Primary"><span id="clock">KTR · --:-- IST</span><div><a href="#about">About</a><a href="#journey">Journey</a><a href="#tools">Languages</a><a href="#contact">Contact</a></div></nav>
+<main>
+<header class="hero">
+ <div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="c" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><text font-family="JetBrains Mono" font-size="9.4" letter-spacing="2.4" fill="#111"><textPath href="#c">SEMESTER 03 · SRMIST KATTANKULATHUR · </textPath></text></svg><b>↓</b></div>
+ <p class="mono" style="margin-bottom:18px">Student · SRMIST · Kattankulathur</p>
+ <h1><span>Malik</span><span>Mohmmad</span><span>Ausaib</span></h1>
+ <div class="hero-row">
+  <div><p>Third semester at SRMIST Kattankulathur — learning how computers work, from circuits to code.</p>
+  <div class="scroll mono"><i></i>Scroll — he’s falling too</div></div>
+  <div class="soc">
+   <a href="https://www.linkedin.com/in/malik-mohammad-ausaib-23ab72248/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.1 2.1 2.1 0 010 4.1zM7.1 20.5H3.6V9h3.5v11.5z"/></svg>LinkedIn<span class="arr">↗</span></a>
+   <a href="https://github.com/malikausaib" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 00.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0023.5 12 11.5 11.5 0 0012 .5z"/></svg>GitHub<span class="arr">↗</span></a>
+  </div>
+ </div>
+ <div class="mq" aria-hidden="true"><div id="mq"></div></div>
+</header>
+
+<section id="about" class="rv"><div class="about"><p class="mono">01 — About</p><div>
+ <p>Three semesters in at SRMIST, from <mark>chemistry and calculus</mark> to operating systems and data structures.</p>
+ <p>This site is the record of what I’ve studied, the languages I work with, and a way to reach me. It grows as the degree does.</p></div></div></section>
+
+<section id="journey" class="rv"><div class="jr"><div><p class="mono">02 — Academic journey</p><h2>Three semesters,<br><em>so far.</em></h2><div class="tabs" role="tablist" aria-label="Semesters" id="tabs"></div></div><div id="pn" role="tabpanel" aria-live="polite"></div></div></section>
+
+<section id="tools" class="rv"><p class="mono">03 — Things I work with</p><h2>Four <em>languages.</em></h2>
+<ul class="langs">
+ <li><span class="mono">C</span><strong>C</strong><code>printf("hello\n");</code></li>
+ <li><span class="mono">Py</span><strong>Python</strong><code>print("hello")</code></li>
+ <li><span class="mono">C++</span><strong>C++</strong><code>std::cout &lt;&lt; "hello";</code></li>
+ <li><span class="mono">Jv</span><strong>Java</strong><code>System.out.println("hello");</code></li>
+</ul></section>
+
+<section id="contact" class="rv"><div class="contact"><div>
+ <p class="mono">04 — Contact</p><h2>Write <em>to me.</em></h2>
+ <div class="mails"><p class="mono">Personal</p><a href="mailto:malikausaib07@gmail.com">malikausaib07@gmail.com</a><p class="mono" style="margin-top:12px">Student</p><a href="mailto:ma1533@srmist.edu.in">ma1533@srmist.edu.in</a>
+ <p class="mono" style="margin-top:12px">Elsewhere</p><a href="https://www.instagram.com/ausaib.malik/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div></div>
+ <form id="f" novalidate>
+  <label><span class="mono">Full name</span><input name="name" required maxlength="100" autocomplete="name"></label>
+  <label><span class="mono">Email</span><input name="email" type="email" required maxlength="254" autocomplete="email"></label>
+  <label><span class="mono">Subject</span><input name="subject" required maxlength="150"></label>
+  <label><span class="mono">Message</span><textarea name="message" required maxlength="5000"></textarea></label>
+  <div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+  <button class="send" type="submit">Send message</button><p id="msg" role="status" aria-live="polite"></p>
+ </form></div></section>
+</main>
+<footer class="mono"><span>© 2026 Malik Mohmmad Ausaib</span><span>SRMIST · KTR</span></footer>
+
+<script>
+const CONFIG={SUPABASE_URL:"",SUPABASE_ANON_KEY:""}; // public values only — see README
+const $=s=>document.querySelector(s);
+
+/* Falling / hanging kid */
+(()=>{const k=$('#kid'),reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let state='hang',timer,rel,cur=0;const set=s=>{state=s;k.setAttribute('class',s)};
+const place=()=>{const h=k.getBoundingClientRect().height||80,top=70,room=Math.max(0,innerHeight-top-h-24),
+ max=document.documentElement.scrollHeight-innerHeight,tgt=max>0?Math.min(1,scrollY/max):0;
+ cur+=(tgt-cur)*(reduce?1:.1);k.style.setProperty('--y',(top+cur*room)+'px');requestAnimationFrame(place)};
+if(!reduce)addEventListener('scroll',()=>{clearTimeout(timer);
+ if(state==='hang'){set('release');clearTimeout(rel);rel=setTimeout(()=>set('fall'),240)}else if(state!=='release')set('fall');
+ timer=setTimeout(()=>{clearTimeout(rel);set('hang')},400)},{passive:true});
+place()})();
+
+/* Semesters */
+const SEM=[
+ {n:'01',s:[['Chemistry'],['Computational Biology'],['Calculus'],['C Programming'],['Python Programming']]},
+ {n:'02',s:[['Advanced Calculus'],['Semiconductor Physics'],['Object-Oriented Programming using C++ (OOPS)'],['Engineering Graphics and Design (EGD — AutoCAD)']]},
+ {n:'03',cur:1,s:[['Computer Organization and Architecture','COA'],['Operating Systems','OS'],['Data Structures and Algorithms','DSA'],['Java Programming'],['Transforms and Boundary Value Problems','TBVP']]}];
+const tabs=$('#tabs'),pn=$('#pn');
+function pick(i){[...tabs.children].forEach((b,j)=>b.setAttribute('aria-selected',i===j));
+ pn.innerHTML='<ol>'+SEM[i].s.map((x,j)=>`<li style="animation-delay:${j*.06}s"><span class="mono">${String(j+1).padStart(2,'0')}</span><span>${x[0]}</span><span class="mono">${x[1]||''}</span></li>`).join('')+'</ol>'}
+SEM.forEach((m,i)=>{const b=document.createElement('button');b.setAttribute('role','tab');b.innerHTML=m.n+(m.cur?'<span class="mono now">● Current</span>':'<span class="mono">Sem</span>');
+ b.onclick=()=>pick(i);if(matchMedia('(hover:hover)').matches)b.onmouseenter=()=>pick(i);tabs.append(b)});
+pick(2);
+
+/* Marquee of every subject */
+const all=SEM.flatMap(m=>m.s.map(x=>x[0].replace(/ \(.*\)/,'')));$('#mq').innerHTML=[...all,...all].map(t=>`<span>${t}</span>`).join('');
+
+/* Reveal, clock */
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&(x.target.classList.add('on'),io.unobserve(x.target))),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const tick=()=>$('#clock').textContent='KTR · '+new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit'})+' IST';tick();setInterval(tick,30000);
+
+/* Contact */
+const f=$('#f'),msg=$('#msg'),btn=f.querySelector('button'),t0=Date.now();
+const show=(t,e)=>{msg.textContent=t;msg.className=e?'err':''};
+f.addEventListener('submit',async e=>{e.preventDefault();if(btn.disabled)return;
+ const d=Object.fromEntries(new FormData(f));['name','email','subject','message'].forEach(k=>d[k]=d[k].trim());
+ if(!d.name||!d.subject||!d.message)return show('Please fill in every field.',1);
+ if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email))return show('That email address doesn’t look right.',1);
+ if(!CONFIG.SUPABASE_URL)return show('The contact backend isn’t configured yet, so nothing was sent. Please email me directly.',1);
+ btn.disabled=true;btn.textContent='Sending…';show('');
+ try{const r=await fetch(CONFIG.SUPABASE_URL+'/functions/v1/contact',{method:'POST',headers:{'Content-Type':'application/json',apikey:CONFIG.SUPABASE_ANON_KEY,Authorization:'Bearer '+CONFIG.SUPABASE_ANON_KEY},body:JSON.stringify({...d,elapsed:Date.now()-t0})});
+  const j=await r.json().catch(()=>({}));
+  if(r.ok&&j.ok){f.reset();show('Message received. I’ll get back to you.')}
+  else show(r.status===429?'Too many messages — please try again later.':(j.error||'Something went wrong. Please try again or email me directly.'),1)}
+ catch{show('Couldn’t reach the server. Check your connection and try again.',1)}
+ finally{btn.disabled=false;btn.textContent='Send message'}});
+</script></body></html>
